@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ironjacamar xmlns="http://www.ironjacamar.org/doc/schema"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.ironjacamar.org/doc/schema
+             http://www.ironjacamar.org/doc/schema/ironjacamar_1_1.xsd">
+   	<transaction-support>NoTransaction</transaction-support>
+	<connection-definitions>
+			
+		<connection-definition		
+		 pool-name="HelloWorldPool"
+		class-name="helloworld.HelloWorldManagedConnectionFactory"
+			jndi-name="java:/eis/HelloWorld" />
+			
+	</connection-definitions>
+</ironjacamar>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ironjacamar xmlns="http://www.ironjacamar.org/doc/schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.ironjacamar.org/doc/schema
+             http://www.ironjacamar.org/doc/schema/ironjacamar_1_1.xsd">
+	<transaction-support>NoTransaction</transaction-support>
+	<connection-definitions>
+
+		<connection-definition pool-name="OtherPool"
+			class-name="other.OtherManagedConnectionFactory" jndi-name="java:/eis/Other">
+			<pool>
+				<initial-pool-size>100</initial-pool-size>
+				<max-pool-size>2000</max-pool-size>
+				<prefill>true</prefill>
+			</pool>
+		</connection-definition>
+
+	</connection-definitions>
+</ironjacamar>

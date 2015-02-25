@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connector xmlns="http://java.sun.com/xml/ns/j2ee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+   http://java.sun.com/xml/ns/j2ee/connector_1_5.xsd" version="1.5">
+
+   <vendor-name>foocomp</vendor-name>
+   <eis-type>awesome</eis-type>
+   <resourceadapter-version>1.0</resourceadapter-version>
+   <license>
+      <description>none</description>
+      <license-required>true</license-required>
+   </license>
+
+   <resourceadapter>
+      <resourceadapter-class>helloworld.HelloWorldResourceAdapter</resourceadapter-class>
+      <outbound-resourceadapter>
+         <connection-definition>
+            <managedconnectionfactory-class>helloworld.HelloWorldManagedConnectionFactory</managedconnectionfactory-class>
+
+            <!-- use the below as is if you used the Connection Factory interface -->
+            <connectionfactory-interface>
+               helloworld.HelloWorldConnectionFactory
+            </connectionfactory-interface>
+
+            <connectionfactory-impl-class>
+               helloworld.HelloWorldConnectionFactoryImpl
+            </connectionfactory-impl-class>
+
+            <connection-interface>
+               helloworld.HelloWorldConnection
+            </connection-interface>
+
+            <connection-impl-class>
+                helloworld.HelloWorldConnectionImpl
+            </connection-impl-class>
+
+         </connection-definition>
+
+         <transaction-support>NoTransaction</transaction-support>
+
+         <reauthentication-support>false</reauthentication-support>
+
+      </outbound-resourceadapter>
+
+   </resourceadapter>
+
+</connector>
